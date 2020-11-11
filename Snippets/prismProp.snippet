@@ -28,15 +28,14 @@
 					<Default>myVar</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[
-		private $type$ $field$;
+			<Code Language="csharp"><![CDATA[private $type$ $field$;
 
-	public $type$ $property$
-	{
-		get { return $field$;}
-		set { SetProperty(ref $field$, value);}
-	}
-	$end$]]>
+		public $type$ $property$
+		{
+			get { return $field$;}
+			set { SetProperty(ref $field$, value);}
+		}
+		$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
