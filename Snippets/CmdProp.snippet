@@ -13,29 +13,31 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>private_name</ID>
-					<ToolTip>private_name</ToolTip>
-					<Default>private</Default>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>MyProperty</Default>
 				</Literal>
-				<literal>
-					<ID>public_name</ID>
-					<ToolTip>public_name</ToolTip>
-					<Default>public</Default>
-				</literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>The variable backing this property</ToolTip>
+					<Default>myVar</Default>
+				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[private ICommand _$private_name$;
-public ICommand $public_name$
-{
-    get
-    {
-        if (_$private_name$ == null)
-        {
-            _$private_name$ = new RelayCommand(param => /*function here*/ );
-        }
-        return _$private_name$;
-    }
-    set { _$private_name$ = value; }
-}$end$]]>
+			<Code Language="csharp"><![CDATA[private ICommand _$field$;
+
+		public ICommand $property$
+		{
+			get
+			{
+				if (_$field$ == null)
+				{
+					_$field$ = new RelayCommand(param => /*function here*/ );
+				}
+				return _$field$;
+			}
+			set { SetProperty(ref $field$, value);}
+		}
+		$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
