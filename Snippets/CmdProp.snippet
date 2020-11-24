@@ -24,20 +24,18 @@
 				</Literal>
 			</Declarations>
 			<Code Language="csharp"><![CDATA[private ICommand _$field$;
-
 		public ICommand $property$
 		{
 			get
 			{
 				if (_$field$ == null)
 				{
-					_$field$ = new RelayCommand(param => /*function here*/ );
+					_$field$ = new RelayCommand(param => /*function here*/ {} );
 				}
 				return _$field$;
 			}
-			set { SetProperty(ref $field$, value);}
-		}
-		$end$]]>
+			set { SetProperty(ref _$field$, value);}
+		}$end$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
