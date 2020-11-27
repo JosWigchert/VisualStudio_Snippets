@@ -29,9 +29,9 @@
             _navigator = navigator;
         }
 
-        private void Navigate()
+        private void Navigate(string page)
         {
-            _navigator.LoadPage(/*Page Name*/"...");
+            _navigator.LoadPage(page);
             /// Example of getting ViewModel of navigated page
 			/// ErrorViewViewModel vm = (ErrorViewViewModel)_navigator.View.DataContext;
             /// evvm.LoadError(PosNr, ErrorNrInt);
